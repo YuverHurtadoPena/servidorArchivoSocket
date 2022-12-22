@@ -1,0 +1,19 @@
+Link de la pagina: https://egresadosutp2020.000webhostapp.com/
+
+
+Actualmemnte los modulos funsionales en el sistema son:
+
+EL super usuario puede ingresar al sistema (logearse), puede registrar a un administrador y de manera 
+automatica el sistema enviara un correo indicandole cual es su usuario y contraseña, es importante puntualizar que
+a veces el correo llega a la carpeta de spam, puede ver
+quienes han solicitado que le desactiben la cuenta y puede salir del sistema.
+
+El administrador puede ingresar al sistema, puede registrar a un egresado y de manera 
+automatica el sistema enviara un correo indicandole cual es su usuario y contraseña, es importante puntualizar que
+a veces el correo llega a la carpeta de spam, puede cambiar su clave, puede solicitar que le desactiben el la cuenta y puede 
+salir del sistema.
+
+El egresado puede puede ingresar al sistema con su usuario y contraseña, puede cambiar su clave y puede salir del sistema.
+
+------------------------------------------------
+CLAVE Y US

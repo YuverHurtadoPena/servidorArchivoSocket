@@ -1,0 +1,46 @@
+Socket designa un concepto abstracto por el cual dos procesos (posiblemente situados en computadoras distintas) pueden intercambiar cualquier flujo de datos, generalmente de manera fiable y ordenada. 
+Además es una estructura de datos que permite que dos máquinas se comuniquen entre ellas.
+El término socket es también usado como el nombre de una interfaz de programación de aplicaciones (API) para la familia de protocolos de Internet TCP/IP, provista usualmente por el sistema operativo.
+
+Los sockets de Internet constituyen el mecanismo para la entrega de paquetes de datos provenientes de la tarjeta de red a los procesos o hilos apropiados. Un socket queda definido por un par de direcciones IP local y remota, un protocolo de transporte y un par de números de puerto local y remoto.
+
+Explicación detallada
+-------------------
+Para que dos procesos puedan comunicarse entre sí es necesario que se cumplan ciertos requisitos:
+
+Que un proceso sea capaz de localizar al otro.
+Que ambos procesos sean capaces de intercambiarse cualquier secuencia de octetos, es decir, datos relevantes a su finalidad.
+Para ello son necesarios los dos recursos que originan el concepto de socket:
+
+Un par de direcciones del protocolo de red (dirección IP, si se utiliza el protocolo TCP/IP), que identifican la computadora de origen y la remota.
+Un par de números de puerto, que identifican a un programa dentro de cada computadora.
+Los sockets permiten implementar una arquitectura cliente-servidor. La comunicación debe ser iniciada por uno de los procesos que se denomina programa "cliente". El segundo proceso espera a que otro inicie la comunicación, por este motivo se denomina programa "servidor".
+
+Un socket es un proceso o hilo existente en la máquina cliente y en la máquina servidora, que sirve en última instancia para que el programa servidor y el cliente lean y escriban la información. Esta información será la transmitida por las diferentes capas de red.
+Propiedades inherentes a los sockets
+Las propiedades de un socket dependen de las características del protocolo en el que se implementan. El protocolo más utilizado es Transmission Control Protocol; una alternativa común a este es User Datagram Protocol.
+
+Cuando se implementan con el protocolo TCP, los sockets tienen las siguientes propiedades:
+
+Son orientados a la conexión.
+Se garantiza la transmisión de todos los octetos sin errores ni omisiones.
+Se garantiza que todo octeto llegará a su destino en el mismo orden en que se ha transmitido.
+Estas propiedades son muy importantes para garantizar la corrección de los programas que tratan la información.
+
+El protocolo UDP es un protocolo no orientado a la conexión, sin garantía de entrega. En ningún caso se garantiza que llegue o que lleguen todos los mensajes en el mismo orden que se mandaron. Esto lo hace adecuado para el envío de mensajes frecuentes pero no demasiado importantes, como por ejemplo, un streaming de audio.
+
+Orígenes
+En los orígenes de Internet, las primeras computadoras en implementar sus protocolos fueron las de la Universidad de Berkeley. Dicha implementación tuvo lugar en una variante del sistema operativo Unix conocida como BSD Unix. Pronto se hizo evidente que los programadores necesitarían un medio sencillo y eficaz para escribir programas capaces de intercomunicarse entre sí. Esta necesidad dio origen a la primera especificación e implementación de sockets, también en Unix. Hoy día, los sockets están implementados como bibliotecas de programación para multitud de sistemas operativos, simplificando la tarea de los programadores.
+
+Variantes
+Existe una variante de los sockets denominada Unix domain sockets, o bien, interprocess communication sockets (IPC sockets). Estos se encuentran especificados en la norma POSIX y tienen como propósito la intercomunicación entre programas dentro de la misma computadora, facilitando así la optimización de recursos para este caso en concreto.
+
+Véase también
+Transmission Control Protocol
+Winsock
+Enlaces externos
+Guía Beej de programación de redes (en inglés, la versión en castellano puede encontrarse guardada aquí)
+Tutorial simple de sockets
+
+fin
+-------------------
